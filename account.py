@@ -3,13 +3,14 @@ class Account:
     A class representing an account object
     """
 
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str, balance=0) -> None:
         """
         Constructor that creates default values for each account object
+        :param balance: Account holder's balance
         :param name: Account holder's first name
         """
         self.__account_name = name
-        self.__account_balance = 0
+        self.__account_balance = balance
 
     def deposit(self, amount: float) -> bool:
         """
